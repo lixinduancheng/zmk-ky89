@@ -46,7 +46,7 @@ layers:
   - ']'
   - \
   - END
-  - AC PASTE
+  - Ctl+ V
   - CAPS
   - A
   - S
@@ -61,7 +61,7 @@ layers:
   - ''''
   - ENTER
   - PG UP
-  - AC CUT
+  - Ctl+ X
   - LSHIFT
   - Z
   - X
@@ -76,7 +76,7 @@ layers:
   - RSHIFT
   - UP
   - PG DN
-  - AC COPY
+  - Ctl+ C
   - LCTRL
   - LGUI
   - LALT
