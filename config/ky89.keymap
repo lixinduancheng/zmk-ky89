@@ -301,13 +301,13 @@
         compatible = "zmk,keymap";
 
         qwerty_layer {
-//  ---------------------------------------------------------------------------------
-//  |      |ESC   |F1  |F2  |F3       |F4         |F5  |F6  |    |F7  |F8         |F9       |F10 |F11  |F12   |&to 1|    |C_MUTE|
-//  |      |GRAVE |N1  |N2  |N3       |N4         |N5  |N6  |    |N7  |N8         |N9       |N0  |MINUS|EQUAL |BSPC |    |HOME  |
-//  |C_MUTE|TAB   |Q   |W   |E        |R          |T   |    |    |Y   |U          |I        |O   |P    |LBKT  |RBKT |BSLH|END   |
-//  |1     |CAPS  |A   |S   |D        |&lt 4 F    |G   |    |    |H   |J          |K        |L   |SEMI |SQT   |ENTER|    |PG_UP |
-//  |2     |LSHIFT|Z   |X   |C        |V          |B   |    |    |N   |M          |COMMA    |DOT |FSLH |RSHIFT|UP   |    |PG_DN |
-//  |3     |LCTRL |LGUI|LALT|&lt 2 DEL|&lt 1 SPACE|    |    |    |    |&lt 1 SPACE|&lt 3 INS|RALT|RCTRL|LEFT  |DOWN |    |RIGHT |
+            //  ---------------------------------------------------------------------------------
+            //  |      |as GRAVE ESC|F1      |F2      |F3       |F4         |F5  |F6  |    |F7  |F8         |F9       |F10     |F11        |F12         |&to 1|    |C_MUTE|
+            //  |      |as ESC GRAVE|N1      |N2      |N3       |N4         |N5  |N6  |    |N7  |N8         |N9       |N0      |MINUS      |A_PLUS EQUAL|BSPC |    |HOME  |
+            //  |C_MUTE|TAB         |Q       |W       |E        |R          |T   |    |    |Y   |U          |I        |O       |P          |LBKT        |RBKT |BSLH|END   |
+            //  |1     |CAPS        |H_LGUI A|H_LALT S|H_LCTRL D|H_LSHF F   |G   |    |    |H   |H_RSHF J   |H_RCTRL K|H_RALT L|H_RGUI SEMI|SQT         |ENTER|    |PG_UP |
+            //  |2     |LSHIFT      |Z       |X       |C        |V          |B   |    |    |N   |M          |COMMA    |DOT     |FSLH       |RSHIFT      |UP   |    |PG_DN |
+            //  |3     |LCTRL       |LGUI    |LALT    |&lt 2 DEL|&lt 1 SPACE|    |    |    |    |&lt 1 SPACE|&lt 3 INS|RALT    |RCTRL      |LEFT        |DOWN |    |RIGHT |
 
             bindings = <
 &kp ESCAPE      &kp F1      &kp F2    &kp F3    &kp F4     &kp F5       &kp F6       &kp F7     &kp F8    &kp F9     &kp F10   &kp F11        &kp F12     &to 1      &kp C_MUTE
@@ -325,14 +325,13 @@
         };
 
         number_layer {
-//  ---------------------------------------------------------------------------------
-//  |    |    |     |            |           |     |     |    |    |                       |     |    |    |    |    |&to 2|    |    |
-//  |    |N0  |     |            |           |     |     |    |    |                       |     |    |    |    |    |     |    |    |
-//  |    |    |N6   |N7          |N8         |N9   |DOT  |    |    |&mt KP_SLASH KP_MULTIPY|N7   |N8  |N9  |    |    |     |    |    |
-//  |    |    |SLASH|MULTIPLY    |MINUS      |PLUS |ENTER|    |    |PLUS                   |1    |2   |3   |    |    |     |    |    |
-//  |    |    |HOME |END         |PG_UP      |PG_DN|BSPC |    |    |MINUS                  |N0   |DOT |DOT |    |    |     |    |    |
-//  |    |    |     |LC(LS(HOME))|LC(LS(END))|     |     |    |    |                       |ENTER|    |    |    |    |     |    |    |
-
+            //  ---------------------------------------------------------------------------------
+            //  |    |    |    |    |    |    |     |    |    |    |     |    |    |    |    |&to 2|    |    |
+            //  |    |    |    |    |    |    |     |    |    |7   |8    |9   |    |    |    |     |    |    |
+            //  |    |    |N7  |N8  |N9  |N0  |DOT  |    |    |NLCK|4    |5   |6   |    |    |     |    |    |
+            //  |    |    |    |    |    |    |ENTER|    |    |PLUS|1    |2   |3   |    |    |     |    |    |
+            //  |    |    |    |    |    |    |BSPC |    |    |0   |0    |DOT |DOT |    |    |     |    |    |
+            //  |    |    |    |    |    |    |     |    |    |    |ENTER|    |    |    |    |     |    |    |
 
             bindings = <
 &trans  &trans  &trans         &trans            &trans           &trans       &trans      &trans                     &trans  &trans      &trans      &trans  &trans  &to 5   &trans
@@ -350,13 +349,13 @@
         };
 
         function_layer {
-//  ---------------------------------------------------------------------------------
-//  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |&to 0|    |    |
-//  |    |    |F1  |F2  |F3  |F4  |F5  |    |    |    |    |    |    |    |    |     |    |    |
-//  |    |    |F6  |F7  |F8  |F9  |F10 |    |    |    |    |    |    |    |    |     |    |    |
-//  |    |    |    |    |    |    |F11 |    |    |    |    |    |    |    |    |     |    |    |
-//  |    |    |    |    |    |    |F12 |    |    |    |    |    |    |    |    |     |    |    |
-//  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |     |    |    |
+            //  ---------------------------------------------------------------------------------
+            //  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+            //  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+            //  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+            //  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+            //  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+            //  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
 
             bindings = <
 &trans  &trans  &trans          &trans           &trans           &trans  &trans   &trans          &trans           &trans          &trans      &trans           &trans  &to 0   &trans
@@ -374,14 +373,13 @@
         };
 
         symbol_layer {
-//  ---------------------------------------------------------------------------------
-//  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |&to 4|    |    |
-//  |    |^   |&   |*   |(   |)   |    |    |    |    |    |    |    |    |    |     |    |    |
-//  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |     |    |    |
-//  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |     |    |    |
-//  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |     |    |    |
-//  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |     |    |    |
-
+            //  ---------------------------------------------------------------------------------
+            //  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+            //  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+            //  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+            //  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+            //  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+            //  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
 
             bindings = <
 &trans  &trans     &trans    &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &to 2   &trans
@@ -399,13 +397,13 @@
         };
 
         control_layer {
-//  ---------------------------------------------------------------------------------
-//  |    |&bootloader |        |        |        |          |         |    |    |    |     |     |     |    |&bootloader|&to 3|    |    |
-//  |    |BT_CLR      |BT_SEL 0|BT_SEL 1|BT_SEL 2|BT_SEL 3  |BT_SEL 4 |    |    |    |     |     |     |    |           |     |    |    |
-//  |    |EP_TOG      |        |RGB_EFF |ENTER   |          |         |    |    |    |HOME |UP   |END  |    |           |     |    |    |
-//  |    |RGB_TOG     |RGB_BRD |RGB_EFR |RGB_BRI |LS(LC(N8))|LC(ENTER)|    |    |    |LEFT |DOWN |RIGHT|    |           |     |    |    |
-//  |    |&out OUT_TOG|RGB_SPD |RGB_SPI |RGB_HUD |RGB_HUI   |         |    |    |    |PG_DN|PG_UP|     |    |           |     |    |    |
-//  |    |            |        |        |        |          |         |    |    |    |     |     |     |    |           |     |    |    |
+            //  ---------------------------------------------------------------------------------
+            //  |    |&bootloader|        |        |        |        |        |&soft_off|    |&soft_off|     |     |     |    |&bootloader|&to 0|    |    |
+            //  |    |BT_CLR     |BT_SEL 0|BT_SEL 1|BT_SEL 2|BT_SEL 3|BT_SEL 4|RGB_TOG  |    |         |     |     |     |    |           |     |    |    |
+            //  |    |EP_TOG     |Ky_MyPwd|RGB_EFF |ENTER   |        |        |         |    |         |HOME |UP   |END  |    |           |     |    |    |
+            //  |    |RGB_TOG    |RGB_BRD |RGB_EFR |RGB_BRI |        |        |         |    |         |LEFT |DOWN |RIGHT|    |           |     |    |    |
+            //  |    |OUT_TOG    |RGB_SPD |RGB_SPI |RGB_HUD |RGB_HUI |        |         |    |         |PG_DN|PG_UP|     |    |           |     |    |    |
+            //  |    |           |        |        |        |        |        |         |    |         |     |     |     |    |           |     |    |    |
 
             bindings = <
 &bootloader  &trans             &trans           &trans           &trans           &trans           &trans         &trans  &trans     &trans     &trans     &trans  &bootloader  &to 3   &trans
@@ -423,14 +421,6 @@
         };
 
         mouse_layer {
-//  ---------------------------------------------------------------------------------
-//  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
-//  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
-//  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
-//  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
-//  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
-//  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
-
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &to 0   &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
