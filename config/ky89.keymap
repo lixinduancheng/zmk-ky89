@@ -4,12 +4,12 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include <behaviors/mouse_keys.dtsi>
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
-#include <behaviors/mouse_keys.dtsi>
 #include <dt-bindings/zmk/outputs.h>
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
@@ -130,26 +130,6 @@
             key-positions = <65 64>;
         };
 
-        direction_left {
-            bindings = <&kp LEFT_ARROW>;
-            key-positions = <50 49>;
-        };
-
-        direction_right {
-            bindings = <&kp RIGHT>;
-            key-positions = <50 51>;
-        };
-
-        direction_up {
-            bindings = <&kp UP_ARROW>;
-            key-positions = <51 33>;
-        };
-
-        direction_down {
-            bindings = <&kp DOWN>;
-            key-positions = <51 49>;
-        };
-
         minus_under_right {
             bindings = <&mt UNDER MINUS>;
             key-positions = <27 26>;
@@ -166,21 +146,6 @@
             key-positions = <63 64>;
             timeout-ms = <200>;
         };
-
-        vol_mute {
-            bindings = <&kp C_MUTE>;
-            key-positions = <77 78 79>;
-        };
-
-        vol_up {
-            bindings = <&kp C_VOL_UP>;
-            key-positions = <77 79>;
-        };
-
-        volume_down {
-            bindings = <&kp C_VOL_DN>;
-            key-positions = <77 78>;
-        };
     };
 
     keymap {
@@ -196,8 +161,8 @@
             //  |3     |LCTRL       |LGUI    |LALT    |&lt 2 DEL|&lt 1 SPACE|    |    |    |    |&lt 1 SPACE|&lt 3 INS|RALT    |RCTRL      |LEFT        |DOWN |    |RIGHT |
 
             bindings = <
-            &kp ESCAPE  &kp F1      &kp F2    &kp F3    &kp F4     &kp F5       &kp F6       &kp F7     &kp F8    &kp F9     &kp F10   &kp F11        &kp F12     &to 1      &kp C_MUTE
-            &kp GRAVE   &kp N1      &kp N2    &kp N3    &kp N4     &kp N5       &kp N6       &kp N7     &kp N8    &kp N9     &kp N0    &kp MINUS      &kp EQUAL   &kp BSPC   &kp HOME
+&kp ESCAPE  &kp F1      &kp F2    &kp F3    &kp F4     &kp F5       &kp F6       &kp F7     &kp F8    &kp F9     &kp F10   &kp F11        &kp F12     &to 1      &kp C_MUTE
+&kp GRAVE   &kp N1      &kp N2    &kp N3    &kp N4     &kp N5       &kp N6       &kp N7     &kp N8    &kp N9     &kp N0    &kp MINUS      &kp EQUAL   &kp BSPC   &kp HOME
 &kp C_MUTE  &kp TAB     &kp Q     &kp W     &kp E      &kp R        &kp T        &kp Y      &kp U     &kp I      &kp O     &kp P          &kp LBKT    &kp RBKT   &kp BSLH    &kp END
 &kp LC(V)   &kp CAPS    &kp A     &kp S     &kp D      &lt 2 F      &kp G        &kp H      &kp J     &kp K      &kp L     &kp SEMICOLON  &kp SQT     &kp ENTER  &kp PG_UP
 &kp LC(X)   &kp LSHIFT  &kp Z     &kp X     &kp C      &lt 3 V      &kp B        &kp N      &kp M     &kp COMMA  &kp DOT   &kp FSLH       &kp RSHIFT  &kp UP     &kp PG_DN
@@ -218,8 +183,8 @@
             //  |    |    |    |    |    |    |     |    |    |    |ENTER|    |    |    |    |     |    |    |
 
             bindings = <
-        &trans  &trans  &trans         &trans            &trans           &trans       &trans      &trans                     &trans  &trans      &trans      &trans  &trans  &to 2   &trans
-        &kp N0  &trans  &trans         &trans            &trans           &trans       &trans      &trans                     &trans  &trans      &trans      &trans  &trans  &trans  &trans
+&trans  &trans  &trans         &trans            &trans           &trans       &trans      &trans                     &trans  &trans      &trans      &trans  &trans  &to 2   &trans
+&kp N0  &trans  &trans         &trans            &trans           &trans       &trans      &trans                     &trans  &trans      &trans      &trans  &trans  &trans  &trans
 &trans  &trans  &kp N6         &kp N7            &kp N8           &kp N9       &kp KP_DOT  &mt KP_DIVIDE KP_MULTIPLY  &kp N4  &kp N5      &kp N6      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp KP_DIVIDE  &kp KP_MULTIPLY   &kp KP_SUBTRACT  &kp KP_PLUS  &kp ENTER   &kp KP_PLUS                &kp N1  &kp N2      &kp N3      &trans  &trans  &trans  &trans
 &trans  &trans  &kp HOME       &kp END           &kp PG_UP        &kp PG_DN    &kp BSPC    &kp KP_MINUS               &kp N0  &kp KP_DOT  &kp KP_DOT  &trans  &trans  &trans  &trans
@@ -240,8 +205,8 @@
             //  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
 
             bindings = <
-        &trans  &trans  &trans          &trans           &trans           &trans  &trans   &trans          &trans           &trans          &trans      &trans           &trans  &to 3   &trans
-        &trans  &kp F1  &kp F2          &kp F3           &kp F4           &kp F5  &trans   &trans          &trans           &trans          &trans      &trans           &trans  &trans  &trans
+&trans  &trans  &trans          &trans           &trans           &trans  &trans   &trans          &trans           &trans          &trans      &trans           &trans  &to 3   &trans
+&trans  &kp F1  &kp F2          &kp F3           &kp F4           &kp F5  &trans   &trans          &trans           &trans          &trans      &trans           &trans  &trans  &trans
 &trans  &trans  &kp F6          &mt F7 UP_ARROW  &kp F8           &kp F9  &kp F10  &trans          &kp HOME         &kp UP_ARROW    &kp END     &trans           &trans  &trans  &trans  &trans
 &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW   &kp RIGHT_ARROW  &trans  &kp F11  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp DOWN_ARROW  &end_enter  &end_semi_enter  &trans  &trans  &trans
 &trans  &trans  &trans          &trans           &trans           &trans  &kp F12  &kp PG_DN       &kp PG_UP        &trans          &trans      &trans           &trans  &trans  &trans
@@ -262,8 +227,8 @@
             //  |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
 
             bindings = <
-        &trans  &trans     &trans    &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &to 4   &trans
-        &trans  &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans    &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &to 4   &trans
+&trans  &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &trans    &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &trans    &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &trans    &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -306,12 +271,12 @@
             //  |    |    |    |    |    |    |    |    |    |              |               |              |         |    |    |    |    |    |
 
             bindings = <
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans           &trans          &trans     &trans  &trans  &trans          &trans  
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans           &trans          &trans     &trans  &trans  &trans          &trans  
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans          &mkp LCLK        &mmv MOVE_UP    &mkp RCLK  &trans  &trans  &trans  &trans  &trans  
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                  &mmv MOVE_LEFT  &mmv MOVE_RIGHT  &mmv MOVE_DOWN  &trans     &trans  &trans  &trans          &trans  
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                  &mkp MCLK       &mkp MB4         &mkp MB5        &trans     &trans  &trans  &trans          &trans  
-&trans  &trans  &trans  &trans  &trans  &trans                                          &trans           &trans          &trans     &trans  &trans  &trans          &trans  
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans           &trans          &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans           &trans          &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &mkp LCLK        &mmv MOVE_UP    &mkp RCLK  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_RIGHT  &mmv MOVE_DOWN  &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MCLK       &mkp MB4         &mkp MB5        &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans           &trans          &trans     &trans  &trans
             >;
 
             label = "mouse";
