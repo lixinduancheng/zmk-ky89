@@ -5,7 +5,6 @@
  */
 
 #include "ky89.dtsi"
-#include <dt-bindings/led/led.h>
 
 &pinctrl {
     // Other pinctrl definitions for other hardware
@@ -24,18 +23,6 @@
         };
     };
 
-    spi3_default: spi3_default {
-        group1 {
-            psels = <NRF_PSEL(SPIM_MOSI, 0, 12)>;
-        };
-    };
-
-    spi3_sleep: spi3_sleep {
-        group1 {
-            psels = <NRF_PSEL(SPIM_MOSI, 0, 12)>;
-            low-power-enable;
-        };
-    };
 };
 
 &i2c0 {
@@ -56,13 +43,8 @@
         multiplex-ratio = <31>; //128*32
         com-sequential; //1.30注销本行
         
-        // 1.30，使用以下
-        //compatible = "sinowealth,sh1106";   //1.30
-        //segment-offset = <2>;   //1.30
-		//multiplex-ratio = <63>; //128*64
-        
 		reg = <0x3c>;
-		label = "Dongle_DISPLAY";
+		label = "LEFT_DISPLAY";
 		page-offset = <0>;
 		display-offset = <0>;
 		segment-remap;
@@ -73,34 +55,10 @@
 	};
 };
 
-&spi3 {
-    compatible = "nordic,nrf-spim";
-    status = "okay";
-
-    pinctrl-0 = <&spi3_default>;
-    pinctrl-1 = <&spi3_sleep>;
-    pinctrl-names = "default", "sleep";
-
-    led_strip: ws2812@0 {
-        compatible = "worldsemi,ws2812-spi";
-
-        /* SPI */
-        reg = <0>; /* ignored, but necessary for SPI bindings */
-        spi-max-frequency = <4000000>;
-
-        /* WS2812 */
-        chain-length = <88>; /* arbitrary; change at will */
-        spi-one-frame = <0x70>;
-        spi-zero-frame = <0x40>;
-        color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
-    };
-};
-
 / {
     chosen {
         zmk,kscan = &kscan;
         zephyr,display = &oled;
-        zmk,underglow = &led_strip;
     };
 
     kscan: kscan {
@@ -138,18 +96,8 @@
         status = "okay";
     };
 
-//    right_encoder: right_encoder {
-//        compatible = "alps,ec11";
-//        steps = <80>;
-//        a-gpios = <&gpio0  8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-//        b-gpios = <&gpio0  6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-//        //status = "disabled";
-//        status = "okay";
-//    };
-
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
-        //sensors = <&left_encoder1 &right_encoder1>;
         sensors = <&left_encoder>;
         triggers-per-rotation = <20>;
     };

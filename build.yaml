@@ -46,7 +46,7 @@ include:
     shield: ky89_right
     artifact-name: ky89_13_Right
 
-# # 四、【重置固件】 
-  # - board: nice_nano_v2
-  #   shield: settings_reset
-  #   artifact-name: ky89_重置固件
+# 四、【重置固件】 
+  - board: nice_nano_v2
+    shield: settings_reset
+    artifact-name: ky89_重置固件
