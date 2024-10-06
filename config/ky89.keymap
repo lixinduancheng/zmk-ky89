@@ -312,9 +312,10 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                  &mmv MOVE_LEFT  &mmv MOVE_RIGHT  &mmv MOVE_DOWN  &trans     &trans  &trans  &trans          &trans  
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                  &mkp MCLK       &mkp MB4         &mkp MB5        &trans     &trans  &trans  &trans          &trans  
 &trans  &trans  &trans  &trans  &trans  &trans                                          &trans           &trans          &trans     &trans  &trans  &trans          &trans  
-  
+            >;
 
             label = "mouse";
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
