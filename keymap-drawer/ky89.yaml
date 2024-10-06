@@ -393,7 +393,7 @@ layers:
   - {t: ▽, type: trans}
   - EP TOG
   - '&Ky_MyPwd'
-  - RGB EFF
+  - {t: ▽, type: trans}
   - ENTER
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -407,10 +407,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - RGB TOG
-  - RGB BRD
-  - RGB EFR
-  - RGB BRI
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - Sft+Ctl+ 8
   - Ctl+ ENTER
   - {t: ▽, type: trans}
@@ -423,10 +423,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - OUT TOG
-  - RGB SPD
-  - RGB SPI
-  - RGB HUD
-  - RGB HUI
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - PG DN
