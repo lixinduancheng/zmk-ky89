@@ -392,7 +392,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - EP TOG
-  - '&Ky_MyPwd'
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ENTER
   - {t: ▽, type: trans}
