@@ -56,8 +56,9 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <180>;
+            tapping-term-ms = <500>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
         };
 
         as: auto_shift {
