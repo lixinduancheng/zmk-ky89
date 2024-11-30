@@ -1,5 +1,5 @@
 layers:
-  qwerty:
+  Qwerty:
   - ESCAPE
   - F1
   - F2
@@ -13,7 +13,7 @@ layers:
   - F10
   - F11
   - F12
-  - {t: number, h: toggle}
+  - {t: Number, h: toggle}
   - MUTE
   - '`'
   - '1'
@@ -30,7 +30,7 @@ layers:
   - '='
   - BSPC
   - HOME
-  - MUTE
+  - {t: MUTE, h: Qwerty}
   - TAB
   - Q
   - W
@@ -51,9 +51,9 @@ layers:
   - A
   - S
   - D
-  - {t: F, h: function}
-  - G
-  - H
+  - {t: F, h: Number}
+  - {t: G, h: mouse}
+  - {t: H, h: Function}
   - J
   - K
   - L
@@ -66,7 +66,7 @@ layers:
   - Z
   - X
   - C
-  - {t: V, h: symbol}
+  - {t: V, h: Symbol}
   - B
   - N
   - M
@@ -80,16 +80,16 @@ layers:
   - LCTRL
   - LGUI
   - LALT
-  - {t: DEL, h: control}
-  - {t: SPACE, h: number}
-  - {t: SPACE, h: number}
-  - {t: INS, h: symbol}
+  - {t: DEL, h: Control}
+  - SPACE
+  - SPACE
+  - {t: INS, h: Symbol}
   - RALT
   - RCTRL
   - LEFT
   - DOWN
   - RIGHT
-  number:
+  Number:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -103,7 +103,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: function, h: toggle}
+  - {t: Function, h: toggle}
   - {t: ▽, type: trans}
   - '0'
   - {t: ▽, type: trans}
@@ -141,7 +141,7 @@ layers:
   - KP DIVIDE
   - KP MULTIPLY
   - KP SUBTRACT
-  - KP PLUS
+  - {t: KP PLUS, type: held}
   - ENTER
   - KP PLUS
   - '1'
@@ -155,8 +155,8 @@ layers:
   - {t: ▽, type: trans}
   - HOME
   - END
-  - PG UP
-  - PG DN
+  - Sft+ PAGE UP
+  - PAGE DOWN
   - BSPC
   - KP MINUS
   - '0'
@@ -171,7 +171,7 @@ layers:
   - {t: ▽, type: trans}
   - Ctl+Sft+ HOME
   - Ctl+Sft+ END
-  - {type: held}
+  - {t: ▽, type: trans}
   - ENTER
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -179,7 +179,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  function:
+  Function:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -193,7 +193,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: symbol, h: toggle}
+  - {t: Symbol, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - F1
@@ -231,9 +231,9 @@ layers:
   - LEFT ARROW
   - DOWN ARROW
   - RIGHT ARROW
-  - {type: held}
+  - {t: ▽, type: trans}
   - F11
-  - LEFT ARROW
+  - {t: LEFT ARROW, type: held}
   - RIGHT ARROW
   - DOWN ARROW
   - '&end_enter'
@@ -269,7 +269,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  symbol:
+  Symbol:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -283,7 +283,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: control, h: toggle}
+  - {t: Control, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ^
@@ -359,7 +359,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  control:
+  Control:
   - '&bootloader'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -502,7 +502,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - '&mmv MOVE_LEFT'
   - '&mmv MOVE_RIGHT'
   - '&mmv MOVE_DOWN'
