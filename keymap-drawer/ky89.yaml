@@ -14,7 +14,7 @@ layers:
   - F11
   - F12
   - {t: Number, h: toggle}
-  - MUTE
+  - {t: Qwerty, h: toggle}
   - '`'
   - '1'
   - '2'
@@ -30,7 +30,7 @@ layers:
   - '='
   - BSPC
   - HOME
-  - {t: MUTE, h: Qwerty}
+  - MUTE
   - TAB
   - Q
   - W
@@ -46,7 +46,7 @@ layers:
   - ']'
   - \
   - END
-  - Ctl+ V
+  - Ctl+V
   - CAPS
   - A
   - S
@@ -61,7 +61,7 @@ layers:
   - ''''
   - ENTER
   - PG UP
-  - Ctl+ X
+  - Ctl+X
   - LSHIFT
   - Z
   - X
@@ -76,7 +76,7 @@ layers:
   - RSHIFT
   - UP
   - PG DN
-  - Ctl+ C
+  - Ctl+C
   - LCTRL
   - LGUI
   - LALT
@@ -155,7 +155,7 @@ layers:
   - {t: ▽, type: trans}
   - HOME
   - END
-  - Sft+ PAGE UP
+  - Sft+PAGE UP
   - PAGE DOWN
   - BSPC
   - KP MINUS
@@ -169,8 +169,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Ctl+Sft+ HOME
-  - Ctl+Sft+ END
+  - Ctl+Sft+HOME
+  - Ctl+Sft+END
   - {t: ▽, type: trans}
   - ENTER
   - {t: ▽, type: trans}
@@ -411,8 +411,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Sft+Ctl+ 8
-  - Ctl+ ENTER
+  - Sft+Ctl+8
+  - Ctl+ENTER
   - LEFT
   - RIGHT
   - DOWN
